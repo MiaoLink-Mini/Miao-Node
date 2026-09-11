@@ -7,15 +7,15 @@ on:
   workflow_dispatch:
     inputs:
       backend_ref:
-        description: 'Explicit GoLink-Backend commit, tag or branch'
+        description: 'Explicit Miao-Backend commit, tag or branch'
         type: string
         required: true
-        default: '32b495120644f8bfb85327a4e96e45d6b51ccc33'
+        default: '8aafd1015c7c00befa4227c9eeb68027b3e0c253'
       frontend_ref:
-        description: 'Explicit GoLink-Frontend commit, tag or branch'
+        description: 'Explicit Miao-Frontend commit, tag or branch'
         type: string
         required: true
-        default: 'e10f605e2505afd1bf4a1bdaab90f42ca145535f'
+        default: '00a2650f4bf3d320ca26282cd759a96c1a56edb0'
 
 permissions:
   contents: read
@@ -55,16 +55,16 @@ jobs:
       - name: Check out the canonical Gateway contract
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          repository: GoLink-Mini/GoLink-Backend
-          ref: ${{ inputs.backend_ref || '32b495120644f8bfb85327a4e96e45d6b51ccc33' }}
+          repository: MiaoLink-Mini/Miao-Backend
+          ref: ${{ inputs.backend_ref || '8aafd1015c7c00befa4227c9eeb68027b3e0c253' }}
           path: WeAgent-Backend
           persist-credentials: false
 
       - name: Check out the frontend referenced by the example configuration
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          repository: GoLink-Mini/GoLink-Frontend
-          ref: ${{ inputs.frontend_ref || 'e10f605e2505afd1bf4a1bdaab90f42ca145535f' }}
+          repository: MiaoLink-Mini/Miao-Frontend
+          ref: ${{ inputs.frontend_ref || '00a2650f4bf3d320ca26282cd759a96c1a56edb0' }}
           path: WeAgent-Frontend
           persist-credentials: false
 
@@ -131,8 +131,8 @@ jobs:
       - name: Check out the Gateway version under test
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          repository: GoLink-Mini/GoLink-Backend
-          ref: ${{ inputs.backend_ref || '32b495120644f8bfb85327a4e96e45d6b51ccc33' }}
+          repository: MiaoLink-Mini/Miao-Backend
+          ref: ${{ inputs.backend_ref || '8aafd1015c7c00befa4227c9eeb68027b3e0c253' }}
           path: WeAgent-Backend
           persist-credentials: false
 
