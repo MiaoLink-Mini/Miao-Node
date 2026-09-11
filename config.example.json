@@ -1,0 +1,15 @@
+{
+  "gateway": "https://agent.000.moe",
+  "name": "喵连 Development Host",
+  "stateDir": ".runtime/state",
+  "maxSessions": 8,
+  "projects": [
+    { "id": "project_frontend", "name": "喵连 Frontend", "path": "../WeAgent-Frontend", "description": "微信小程序" },
+    { "id": "project_backend", "name": "喵连 Backend", "path": "../WeAgent-Backend", "description": "Go Gateway" }
+  ],
+  "plugins": [
+    { "type": "codex", "enabled": true },
+    { "type": "pi", "enabled": true },
+    { "type": "claude", "enabled": true, "maxBudgetUsd": 2 }
+  ]
+}

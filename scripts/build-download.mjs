@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
+import { readInstallFiles } from './install.mjs';
+import { progress } from '../src/install-progress.mjs';
+const root=fileURLToPath(new URL('../../',import.meta.url));
+const output=path.resolve(process.argv[2] || '.release/node-download');
+if(fs.existsSync(output)) throw Error('Choose a new output directory');
+const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
+const source=readInstallFiles(root).files;
+const manifest='WeAgent-Node/install-files.json', bytes=fs.readFileSync(path.join(root,manifest));
+source.push({name:manifest,bytes,sha256:digest(bytes)});
+const bundle=Buffer.from(JSON.stringify({version:1,files:source.map(f=>({path:f.name,sha256:f.sha256,content:f.bytes.toString('base64')}))}));
+const hash=digest(bundle);fs.mkdirSync(output,{recursive:true});
+fs.writeFileSync(path.join(output,hash+'.json'),bundle);
+fs.writeFileSync(path.join(output,'install.mjs'),fs.readFileSync(new URL('./bootstrap.mjs',import.meta.url),'utf8').replace('__BUNDLE_SHA256__',hash).replace('/* __INSTALL_PROGRESS__ */', progress.toString()));
+console.log(JSON.stringify({output,hash,files:source.length}));

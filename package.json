@@ -1,0 +1,22 @@
+{
+  "name": "golink-node",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.1.0"
+  },
+  "scripts": {
+    "start": "node src/cli.mjs start",
+    "doctor": "node src/cli.mjs doctor",
+    "test": "node --test tests/*.test.mjs",
+    "probe": "node scripts/probe-native.mjs",
+    "test:integration": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/test-integration.ps1"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "0.3.263",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "ws": "8.21.3"
+  }
+}

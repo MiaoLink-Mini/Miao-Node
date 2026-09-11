@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "path": "WeAgent-Backend/contracts/protocol.schema.json",
+      "sha256": "6e3b83c53c0f187cd1e32986ede391f71d8c67c3dbc8ad7399a22a049e4aa4f6"
+    },
+    {
+      "path": "WeAgent-Backend/contracts/workspace-operations.json",
+      "sha256": "cd256caec5d67b82bfe6ef481263e304a2e1c10484a5de6017e27cb2277b72c7"
+    },
+    {
+      "path": "WeAgent-Node/package-lock.json",
+      "sha256": "4df79444808d3fbfa1d9f54ae0ec7158760d7127c9e39903bcb962b8f0a64b1d"
+    },
+    {
+      "path": "WeAgent-Node/package.json",
+      "sha256": "82289d4e75cb69d361c14442c2a153bae4fba8cd657e72b2723dcc5f221896e4"
+    },
+    {
+      "path": "WeAgent-Node/plugins/pi/weagent-extension.mjs",
+      "sha256": "141d968d6e92d584fc6a2f7084f792230665665eeb63b5596eaa7523c1c5830a"
+    },
+    {
+      "path": "WeAgent-Node/scripts/install.mjs",
+      "sha256": "8aedd08b904cb091025cc4a383149f70afdc0ba2b2602a172942b40b101852aa"
+    },
+    {
+      "path": "WeAgent-Node/src/agent-select.mjs",
+      "sha256": "11692bae5d172257db2c17333dd5eb52abe110d43cbb9198b745cb2ea6dc28a0"
+    },
+    {
+      "path": "WeAgent-Node/src/cli-options.mjs",
+      "sha256": "a1381ee4c9ae417b0e3036e0b39bd94ead6987c161742bffc20134477e61ffcc"
+    },
+    {
+      "path": "WeAgent-Node/src/cli.mjs",
+      "sha256": "86dc6f0e4a38dece60960f91e5579fc5d309dee8ec7416282361c5bc12f8302a"
+    },
+    {
+      "path": "WeAgent-Node/src/common.mjs",
+      "sha256": "f6933027dfc886eca7fb653772da982931ef7e8a501c37babede9b000173299a"
+    },
+    {
+      "path": "WeAgent-Node/src/config.mjs",
+      "sha256": "01594287b607846325c7554271ec67099606f194d627c74c55e4b375548def2f"
+    },
+    {
+      "path": "WeAgent-Node/src/daemon.mjs",
+      "sha256": "e252a3c2b813f92333aa750b0813b82a78869dacb706322eddffe9a0e765fa1d"
+    },
+    {
+      "path": "WeAgent-Node/src/install-progress.mjs",
+      "sha256": "922e43d2841dc8399893192ee2b0d60e761df51ab74a951090e76c04b513455b"
+    },
+    {
+      "path": "WeAgent-Node/src/manage.mjs",
+      "sha256": "01d8cfeca34db0c7497678c2f0c75c0e2848e334e4ac9c5b1bcc90ad4b6e5c12"
+    },
+    {
+      "path": "WeAgent-Node/src/native-rpc.mjs",
+      "sha256": "4a5a58108184ed4b5988d64dc035d6e9a922a41c0b741b8b09f0c0b0c1ce0b33"
+    },
+    {
+      "path": "WeAgent-Node/src/plugins/base.mjs",
+      "sha256": "1f24f06ace97822eac03b045f1e6158785455d1fa1751852ef911fef02fb9498"
+    },
+    {
+      "path": "WeAgent-Node/src/plugins/claude.mjs",
+      "sha256": "d6e0de8a715c8ab2860f9b2ef875b6956627519aa27ae84bd1f09265e59a47b3"
+    },
+    {
+      "path": "WeAgent-Node/src/plugins/codex.mjs",
+      "sha256": "219cf9b15855db0a6a562dd204ba8052663aa11d849dfa0c5fe6fc83875e8f8b"
+    },
+    {
+      "path": "WeAgent-Node/src/plugins/pi.mjs",
+      "sha256": "56f12d1e77a6ee47157121283f243ff85994f3894adccb0bfdfaf6803f805087"
+    },
+    {
+      "path": "WeAgent-Node/src/pricing.mjs",
+      "sha256": "87a7dcf1388c9293d63e5e8269ff7cec134a61d7ae9d5da671c95796e29fc4d8"
+    },
+    {
+      "path": "WeAgent-Node/src/protocol.mjs",
+      "sha256": "850388881d4cec92082e5ebabd27742ba63d7a75f27117a842b21292fec58093"
+    },
+    {
+      "path": "WeAgent-Node/src/state.mjs",
+      "sha256": "6ed6e7360b64c6b91e1c7b355c160e5a2da1f43763a5992b753e16795b428086"
+    },
+    {
+      "path": "WeAgent-Node/src/workspace/claude.mjs",
+      "sha256": "228931f79db4751d0921bc976dedf5c55372f0591970803d3da7c74ee29a9fe1"
+    },
+    {
+      "path": "WeAgent-Node/src/workspace/codex-permissions.mjs",
+      "sha256": "548e2e9625470f7a551f31ee7a27ba75d99f1e5bf3644650a7b57cf26c7497ea"
+    },
+    {
+      "path": "WeAgent-Node/src/workspace/codex.mjs",
+      "sha256": "44f94c3972c5d6143b11e5ff923b6e434dceae9ba606d93c4ab24a8e146655d9"
+    },
+    {
+      "path": "WeAgent-Node/src/workspace/elicitation.mjs",
+      "sha256": "4790565e3db7da490009f3a04c55b4adbc0f0bd723a06207d9d7bddfa0534db1"
+    },
+    {
+      "path": "WeAgent-Node/src/workspace/files.mjs",
+      "sha256": "8e662a7d51cae4215c8d6b5e818260f30340fa45c24fdfbf09e63967941ce378"
+    },
+    {
+      "path": "WeAgent-Node/src/workspace/handles.mjs",
+      "sha256": "a87c09c9d2daf475f083768870c53c2da97d4ccf75c6a852079e11437129398e"
+    },
+    {
+      "path": "WeAgent-Node/src/workspace/input.mjs",
+      "sha256": "f05f9da1f29a5f3422c513d0099efa2cf3c9883df0093808bc3b529888c43627"
+    },
+    {
+      "path": "WeAgent-Node/src/workspace/pi-history.mjs",
+      "sha256": "0b03c0893bf25d3c80ba40ae7e190d0430a5e2401a2fec77d2466d89ddf0b7ea"
+    },
+    {
+      "path": "WeAgent-Node/src/workspace/pi.mjs",
+      "sha256": "d52965ea311ada0d34fc2c101ae3577405c7fb1ae0b604a852fcbad7e31b5fa6"
+    },
+    {
+      "path": "WeAgent-Node/src/workspace/project.mjs",
+      "sha256": "fdc37f6eff09ce8b036aee2c02000e24da501cc87b6eb59df04788248a6cf4a2"
+    },
+    {
+      "path": "WeAgent-Node/src/workspace/service.mjs",
+      "sha256": "e07f4637273d6d2ec997d8ee2b181b2d5d0ed7292d7930b824ff709a86dd0d9f"
+    },
+    {
+      "path": "WeAgent-Node/src/workspace/view.mjs",
+      "sha256": "ef0475c2c3931133aa50c178a003d4c7f0122cd68b79d415cb5c81c20210c99a"
+    }
+  ]
+}
