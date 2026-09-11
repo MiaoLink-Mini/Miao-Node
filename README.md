@@ -2,7 +2,7 @@
 
 <p align="center"><img src="docs/assets/product-icon.png" width="128" height="128" alt="喵连" /></p>
 
-产品名称已更新为 **喵连**。GitHub 仓库名、协议标识和本地兼容目录保持不变，无需重新配对。
+产品名称已更新为 **喵连**。GitHub 仓库名和协议标识保持不变，无需重新配对。
 
 [![CI](https://github.com/MiaoLink-Mini/Miao-Node/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/MiaoLink-Mini/Miao-Node/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -38,24 +38,24 @@ Agent 的安装与登录需要在开发设备上完成。发现可执行文件�
 
 ### 1. 获取关联仓库
 
-当前协议、示例项目与联调脚本仍使用 `WeAgent-*` 本地目录名。按以下布局克隆，避免自行改写协议路径：
+按以下布局克隆三个仓库：
 
 ```bash
-git clone https://github.com/MiaoLink-Mini/Miao-Backend.git WeAgent-Backend
-git clone https://github.com/MiaoLink-Mini/Miao-Frontend.git WeAgent-Frontend
-git clone https://github.com/MiaoLink-Mini/Miao-Node.git WeAgent-Node
-cd WeAgent-Node
+git clone https://github.com/MiaoLink-Mini/Miao-Backend.git Miao-Backend
+git clone https://github.com/MiaoLink-Mini/Miao-Frontend.git Miao-Frontend
+git clone https://github.com/MiaoLink-Mini/Miao-Node.git Miao-Node
+cd Miao-Node
 npm ci --ignore-scripts --no-audit --no-fund
 ```
 
 ```text
 workspace/
-├── WeAgent-Backend/
+├── Miao-Backend/
 │   └── contracts/
 │       ├── protocol.schema.json
 │       └── workspace-operations.json
-├── WeAgent-Frontend/
-└── WeAgent-Node/
+├── Miao-Frontend/
+└── Miao-Node/
 ```
 
 后端 schema 是 Node 的代码依赖；前端目录出现在随附示例配置中。改用自己的项目时，应显式修改项目白名单，而不是保留不存在的示例路径。
@@ -160,7 +160,7 @@ npm test
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/test-integration.ps1
 ```
 
-该脚本需要相邻 `WeAgent-Backend`、Go、原生 PostgreSQL 和正确的 `POSTGRES_BIN`，创建专用数据库并启动实际 Gateway，再运行独立 Node fixture。不要拿它操作生产数据库。
+该脚本需要相邻 `Miao-Backend`、Go、原生 PostgreSQL 和正确的 `POSTGRES_BIN`，创建专用数据库并启动实际 Gateway，再运行独立 Node fixture。不要拿它操作生产数据库。
 
 Linux CI 直接编排同一 Gateway、迁移入口及 `scripts/integration.mjs`，不会把 Windows 专用 PowerShell 数据库脚本直接搬到 Linux 运行。
 
