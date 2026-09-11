@@ -55,11 +55,15 @@ export function progress(label, output = process.stdout, env = process.env) {
 
 export async function runStep(command, args, options = {}, label = '执行安装步骤') {
   const done = progress(label);
-  let tail = '', interrupted = false;
+  let stdoutTail = '', stderrTail = '', interrupted = false;
   const child = spawn(command, args, { ...options, shell: false, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] });
-  const collect = data => { tail = (tail + data.toString()).slice(-16384); };
-  child.stdout.on('data', collect);
-  child.stderr.on('data', collect);
+  const collect = (which, data) => {
+    const text = data.toString();
+    if (which === 'stderr') stderrTail = (stderrTail + text).slice(-8192);
+    else stdoutTail = (stdoutTail + text).slice(-8192);
+  };
+  child.stdout.on('data', data => collect('stdout', data));
+  child.stderr.on('data', data => collect('stderr', data));
   const cancel = () => { interrupted = true; child.kill(); };
   process.on('SIGINT', cancel);
   process.on('SIGTERM', cancel);
@@ -70,7 +74,7 @@ export async function runStep(command, args, options = {}, label = '执行安装
     });
     const ok = code === 0 && !interrupted;
     done(ok);
-    if (!ok && tail) process.stderr.write(tail + '\n');
+    if (!ok && (stderrTail || stdoutTail)) process.stderr.write((stderrTail + stdoutTail).slice(-16384) + '\n');
     return interrupted ? 130 : code ?? 1;
   } catch (error) {
     done(false);

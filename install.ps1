@@ -2,7 +2,7 @@
 $ErrorActionPreference = 'Stop'
 # Get-Command can return every matching executable (Volta, MSI, Scoop, ...).
 # Preserve PATH precedence, but never pass an array of paths to the call operator.
-$node = Get-Command node -CommandType Application -ErrorAction SilentlyContinue | Select-Object -First 1
+$node = Get-Command node 2>$null | Where-Object { $_.Source } | Select-Object -First 1
 if (-not $node) {
     Write-Error 'Node.js >=24.1.0 is required. Install Node.js, then run this script again.'
     exit 1
