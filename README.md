@@ -4,10 +4,10 @@
 
 产品名称已更新为 **喵连**。GitHub 仓库名、协议标识和本地兼容目录保持不变，无需重新配对。
 
-[![CI](https://github.com/GoLink-Mini/GoLink-Node/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/GoLink-Mini/GoLink-Node/actions/workflows/ci.yml)
+[![CI](https://github.com/MiaoLink-Mini/Miao-Node/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/MiaoLink-Mini/Miao-Node/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**把自己的开发设备接入 GoLink，在微信中与本机 Agent 协作。**
+**把自己的开发设备接入喵连，在微信中与本机 Agent 协作。**
 
 喵连 Node 是运行在开发设备上的 Node.js 守护进程，连接 喵连 Gateway，并适配 **Codex、Pi、Claude Code**。它管理本机 Agent 通道、会话、命令回执和待确认事件，而不是把项目与 Agent 执行环境迁移到云端。
 
@@ -15,9 +15,9 @@
 
 | 组件 | 职责 |
 | --- | --- |
-| [GoLink-Frontend](https://github.com/GoLink-Mini/GoLink-Frontend) | 微信小程序、设备与会话界面 |
-| [GoLink-Backend](https://github.com/GoLink-Mini/GoLink-Backend) | Go Gateway、认证、配对、协议与 PostgreSQL 持久化 |
-| **[GoLink-Node](https://github.com/GoLink-Mini/GoLink-Node)** | 开发设备守护进程，以及原生 Agent 适配 |
+| [Miao-Frontend](https://github.com/MiaoLink-Mini/Miao-Frontend) | 微信小程序、设备与会话界面 |
+| [Miao-Backend](https://github.com/MiaoLink-Mini/Miao-Backend) | Go Gateway、认证、配对、协议与 PostgreSQL 持久化 |
+| **[Miao-Node](https://github.com/MiaoLink-Mini/Miao-Node)** | 开发设备守护进程，以及原生 Agent 适配 |
 
 ```text
 微信小程序  ←→  Go Gateway  ←→  喵连 Node
@@ -41,9 +41,9 @@ Agent 的安装与登录需要在开发设备上完成。发现可执行文件�
 当前协议、示例项目与联调脚本仍使用 `WeAgent-*` 本地目录名。按以下布局克隆，避免自行改写协议路径：
 
 ```bash
-git clone https://github.com/GoLink-Mini/GoLink-Backend.git WeAgent-Backend
-git clone https://github.com/GoLink-Mini/GoLink-Frontend.git WeAgent-Frontend
-git clone https://github.com/GoLink-Mini/GoLink-Node.git WeAgent-Node
+git clone https://github.com/MiaoLink-Mini/Miao-Backend.git WeAgent-Backend
+git clone https://github.com/MiaoLink-Mini/Miao-Frontend.git WeAgent-Frontend
+git clone https://github.com/MiaoLink-Mini/Miao-Node.git WeAgent-Node
 cd WeAgent-Node
 npm ci --ignore-scripts --no-audit --no-fund
 ```
@@ -196,7 +196,7 @@ Actions 使用完整提交 SHA、只读权限、无持久检出凭据，并设�
 [适配设计](docs/plugin-plan.md) ·
 [原生控制记录](docs/native-controls-plan.md) ·
 [验证记录](docs/verification.md) ·
-[Gateway Node 契约](https://github.com/GoLink-Mini/GoLink-Backend/blob/main/docs/node-contract.md)
+[Gateway Node 契约](https://github.com/MiaoLink-Mini/Miao-Backend/blob/main/docs/node-contract.md)
 
 历史记录只说明对应版本与环境的验证结果。提交修改时，请同时说明测试系统、Node.js 版本、后端提交和是否使用真实 Agent。
 
