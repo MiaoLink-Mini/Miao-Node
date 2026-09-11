@@ -51,7 +51,7 @@
     },
     {
       "path": "WeAgent-Node/src/install-progress.mjs",
-      "sha256": "922e43d2841dc8399893192ee2b0d60e761df51ab74a951090e76c04b513455b"
+      "sha256": "60b1ea5d5bcabc08f8162c75124b13caa738a994c90107662bd98da7718186a6"
     },
     {
       "path": "WeAgent-Node/src/manage.mjs",
